@@ -1,0 +1,6 @@
+@CUBETestAPI_HostAddress = http://localhost:5127
+
+GET {{CUBETestAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
