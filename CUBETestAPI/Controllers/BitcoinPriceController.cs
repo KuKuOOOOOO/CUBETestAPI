@@ -1,4 +1,5 @@
-﻿using CUBETestAPI.Model.ResponseModel;
+﻿using CUBETestAPI.Helpers;
+using CUBETestAPI.Models.ResponseModels;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
@@ -25,13 +26,18 @@ namespace CUBETestAPI.Controllers
             {
                 var response = await _httpClient.GetAsync(coindeskUrl);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return StatusCode((int)response.StatusCode, "Failed to fetch data from Coindesk API.");
 
                 var jsonResponse = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<CoindeskResponseModel>(jsonResponse);
+                var coindeskData = JsonConvert.DeserializeObject<CoindeskResponseModel>(jsonResponse);
 
-                return Ok(data);
+                if (coindeskData == null)
+                    return StatusCode(500, "Error parsing Coindesk API response.");
+
+                var transformedData = CoindeskResponseMapper.MapToTransformedFormat(coindeskData);
+
+                return Ok(transformedData);
             }
             catch (Exception ex)
             {
