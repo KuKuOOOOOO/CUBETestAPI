@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUBETestAPI", "CUBETestAPI\CUBETestAPI.csproj", "{DDFDB051-702F-4D38-9CCB-7FCC931D2E34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUBETestAPITest", "CUBETestAPITest\CUBETestAPITest.csproj", "{CF976352-E520-4868-BB7B-7A9D771E991F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DDFDB051-702F-4D38-9CCB-7FCC931D2E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDFDB051-702F-4D38-9CCB-7FCC931D2E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDFDB051-702F-4D38-9CCB-7FCC931D2E34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF976352-E520-4868-BB7B-7A9D771E991F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF976352-E520-4868-BB7B-7A9D771E991F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF976352-E520-4868-BB7B-7A9D771E991F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF976352-E520-4868-BB7B-7A9D771E991F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

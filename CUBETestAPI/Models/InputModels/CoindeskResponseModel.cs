@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace CUBETestAPI.Models.ResponseModels
+namespace CUBETestAPI.Models.InputModels
 {
     public class CoindeskResponseModel
     {

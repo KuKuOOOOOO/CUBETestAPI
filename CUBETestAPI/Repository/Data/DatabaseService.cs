@@ -1,4 +1,4 @@
-﻿using CUBETestAPI.Models.TransferModels;
+﻿using CUBETestAPI.Models.ResponseModels;
 using CUBETestAPI.Repository.Interfaces;
 using Dapper;
 using Microsoft.Data.SqlClient;

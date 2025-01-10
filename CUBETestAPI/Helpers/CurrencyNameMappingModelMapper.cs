@@ -1,5 +1,5 @@
 ﻿using CUBETestAPI.Models.ControllerModels;
-using CUBETestAPI.Models.TransferModels;
+using CUBETestAPI.Models.ResponseModels;
 
 namespace CUBETestAPI.Helpers
 {

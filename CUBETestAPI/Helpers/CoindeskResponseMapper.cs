@@ -1,5 +1,5 @@
-﻿using CUBETestAPI.Models.ResponseModels;
-using CUBETestAPI.Models.TransferModels;
+﻿using CUBETestAPI.Models.InputModels;
+using CUBETestAPI.Models.OutputModels;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -32,16 +32,16 @@ namespace CUBETestAPI.Helpers
                    result.ToString("yyyy/MM/dd HH:mm:ss", CultureInfo.InvariantCulture) :
                    updatedISO;
         }
-        private static List<Models.TransferModels.CurrencyInfo> GetCurrencyInfo(BpiInfo bpiInfo)
+        private static List<Models.OutputModels.CurrencyInfo> GetCurrencyInfo(BpiInfo bpiInfo)
         {
-            List<Models.TransferModels.CurrencyInfo> currencyInfos = new List<Models.TransferModels.CurrencyInfo>();
+            List<Models.OutputModels.CurrencyInfo> currencyInfos = new List<Models.OutputModels.CurrencyInfo>();
 
             if (bpiInfo == null)
                 return currencyInfos;
 
             if (bpiInfo.USD != null)
             {
-                currencyInfos.Add(new Models.TransferModels.CurrencyInfo()
+                currencyInfos.Add(new Models.OutputModels.CurrencyInfo()
                 {
                     Currency = "USD",
                     Currency_ChineseName = "美金",
@@ -51,7 +51,7 @@ namespace CUBETestAPI.Helpers
             }
             if (bpiInfo.EUR != null)
             {
-                currencyInfos.Add(new Models.TransferModels.CurrencyInfo()
+                currencyInfos.Add(new Models.OutputModels.CurrencyInfo()
                 {
                     Currency = "EUR",
                     Currency_ChineseName = "歐元",
@@ -61,7 +61,7 @@ namespace CUBETestAPI.Helpers
             }
             if (bpiInfo.GBP != null)
             {
-                currencyInfos.Add(new Models.TransferModels.CurrencyInfo()
+                currencyInfos.Add(new Models.OutputModels.CurrencyInfo()
                 {
                     Currency = "GBP",
                     Currency_ChineseName = "英鎊",

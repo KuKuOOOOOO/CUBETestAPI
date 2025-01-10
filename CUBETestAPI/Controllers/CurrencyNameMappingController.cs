@@ -1,6 +1,6 @@
 ﻿using CUBETestAPI.Helpers;
 using CUBETestAPI.Models.ControllerModels;
-using CUBETestAPI.Models.TransferModels;
+using CUBETestAPI.Models.ResponseModels;
 using CUBETestAPI.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;

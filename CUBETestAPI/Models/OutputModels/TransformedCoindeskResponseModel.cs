@@ -1,9 +1,9 @@
-﻿namespace CUBETestAPI.Models.TransferModels
+﻿namespace CUBETestAPI.Models.OutputModels
 {
     public class TransformedCoindeskResponseModel
     {
         public string UpdateTime { get; set; }
-        public List<CurrencyInfo> CurrencyInfos { get; set; } 
+        public List<CurrencyInfo> CurrencyInfos { get; set; }
     }
     public class CurrencyInfo
     {

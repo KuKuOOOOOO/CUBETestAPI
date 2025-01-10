@@ -1,4 +1,4 @@
-﻿namespace CUBETestAPI.Models.TransferModels
+﻿namespace CUBETestAPI.Models.ResponseModels
 {
     public class CurrencyNameMappingModel
     {

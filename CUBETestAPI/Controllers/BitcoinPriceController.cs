@@ -1,5 +1,5 @@
 ﻿using CUBETestAPI.Helpers;
-using CUBETestAPI.Models.ResponseModels;
+using CUBETestAPI.Models.InputModels;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;

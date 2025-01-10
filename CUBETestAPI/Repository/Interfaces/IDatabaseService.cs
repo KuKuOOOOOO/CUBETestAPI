@@ -1,4 +1,4 @@
-﻿using CUBETestAPI.Models.TransferModels;
+﻿using CUBETestAPI.Models.ResponseModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
