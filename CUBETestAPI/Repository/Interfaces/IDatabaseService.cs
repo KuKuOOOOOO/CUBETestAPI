@@ -8,7 +8,7 @@ namespace CUBETestAPI.Repository.Interfaces
     {
         Task<IEnumerable<CurrencyNameMappingModel>> GetAllCurrencyNameMapping();
         Task<CurrencyNameMappingModel> GetCurrencyNameMapping(Guid id);
-        Task<int> CreateCurrencyNameMapping(CurrencyNameMappingModel currencyNameMapping);
+        Task<Guid> CreateCurrencyNameMapping(CurrencyNameMappingModel currencyNameMapping);
         Task<int> UpdateCurrencyNameMapping(CurrencyNameMappingModel currencyNameMapping);
         Task<int> DeleteCurrencyNameMapping(Guid id);
     }

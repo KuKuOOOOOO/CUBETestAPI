@@ -43,18 +43,19 @@ WHERE ID = @ID
                 ID = id
             });
         }
-        public async Task<int> CreateCurrencyNameMapping(CurrencyNameMappingModel model)
+        public async Task<Guid> CreateCurrencyNameMapping(CurrencyNameMappingModel model)
         {
             const string cmdTxt = $@"
 INSERT INTO CurrencyNameMapping(ID, 
                                 Currency,
                                 ChineseName)
+OUTPUT INSERTED.ID
 VALUES(@ID,
        @Currency,
        @ChineseName)
 ";
             using IDbConnection con = CreateConnection();
-            return await con.QuerySingleAsync<int>(cmdTxt, model);
+            return await con.QuerySingleAsync<Guid>(cmdTxt, model);
         }
         public async Task<int> UpdateCurrencyNameMapping(CurrencyNameMappingModel model)
         {
