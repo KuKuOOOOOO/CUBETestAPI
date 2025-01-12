@@ -37,4 +37,4 @@ ChineseName: 幣別中文名稱
 5. 能夠運行在 Docker
 
 ## Demo Youtube
-![Demo](https://youtu.be/j7tiq78el8s?si=q_5FWWGTwgPw9Rio)
+(https://youtu.be/j7tiq78el8s?si=q_5FWWGTwgPw9Rio)
