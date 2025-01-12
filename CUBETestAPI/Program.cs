@@ -1,3 +1,4 @@
+using CUBETestAPI.Helpers;
 using CUBETestAPI.Repository.Data;
 using CUBETestAPI.Repository.Interfaces;
 
@@ -17,6 +18,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
+
+// Add Request and Response Logging Middleware
+app.UseMiddleware<RequestResponseLoggingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
