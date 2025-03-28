@@ -1,21 +1,21 @@
 # CUBETestAPI
 
-CUBE .NET Engineer½u¤W§@·~¹ê§@
+CUBE .NET Engineerç·šä¸Šä½œæ¥­å¯¦ä½œ
 
-## ¥\¯àÂ²­z»PAPI¹ï·Ó
+## åŠŸèƒ½ç°¡è¿°èˆ‡APIå°ç…§
 
-1. GET /api/BitcoinPrice/current: ±Ncoindesk APIÂà´«¸ê®Æ¨Ã­«·s¿é¥X
-2. GET /api/CurrencyNameMapping: ¬d¸ß¥ş³¡¹ô§O¤¤¤å¦WºÙ¹ï·Óªí
-3. GET /api/CurrnecyNameMapping/{id}: ¬d¸ß¸Óid¤§¹ô§O¤¤¤å¦WºÙ¹ï·Óªí
-4. POST /api/CurrencyNameMapping: ·s¼W¹ô§O¤¤¤å¦WºÙ¹ï·Óªí¸ê®Æ
-5. PUT /api/CurrencyNameMapping/{id}: ­×§ï¸Óid¤§¹ô§O¤¤¤å¦WºÙ¹ï·Óªí
-6. DELETE /api/CurrencyNameMapping/{id}: §R°£¸Óid¤§¹ô§O¤¤¤å¦WºÙ¹ï·Óªí
+1. GET /api/BitcoinPrice/current: å°‡coindesk APIè½‰æ›è³‡æ–™ä¸¦é‡æ–°è¼¸å‡º
+2. GET /api/CurrencyNameMapping: æŸ¥è©¢å…¨éƒ¨å¹£åˆ¥ä¸­æ–‡åç¨±å°ç…§è¡¨
+3. GET /api/CurrnecyNameMapping/{id}: æŸ¥è©¢è©²idä¹‹å¹£åˆ¥ä¸­æ–‡åç¨±å°ç…§è¡¨
+4. POST /api/CurrencyNameMapping: æ–°å¢å¹£åˆ¥ä¸­æ–‡åç¨±å°ç…§è¡¨è³‡æ–™
+5. PUT /api/CurrencyNameMapping/{id}: ä¿®æ”¹è©²idä¹‹å¹£åˆ¥ä¸­æ–‡åç¨±å°ç…§è¡¨
+6. DELETE /api/CurrencyNameMapping/{id}: åˆªé™¤è©²idä¹‹å¹£åˆ¥ä¸­æ–‡åç¨±å°ç…§è¡¨
 
-## ¥D­nµ{¦¡¥\¯àÂ²­z
-1. Controller/BitcoinPriceController: coindesk API³B²zÂà´«API
-2. Controller/CurrencyNameMappingController: ¹ô§O¤¤¤å¦WºÙCRUD API
+## ä¸»è¦ç¨‹å¼åŠŸèƒ½ç°¡è¿°
+1. Controller/BitcoinPriceController: coindesk APIè™•ç†è½‰æ›API
+2. Controller/CurrencyNameMappingController: å¹£åˆ¥ä¸­æ–‡åç¨±CRUD API
 3. Repository: Database CRUD
-4. CUBETestAPITest: ¦UAPI»PDB CRUD Unit Test
+4. CUBETestAPITest: å„APIèˆ‡DB CRUD Unit Test
 
 ## Database Table Schema
 
@@ -24,17 +24,18 @@ CREATE TABLE CurrencyNameMapping(ID UNIQUEIDENTIFIER NOT NULL,
 								 ChineseName NVARCHAR(100) NULL,
 								 PRIMARY KEY CLUSTERED (ID ASC));
 
-ID: ¹ô§OID(PK)
-Currency: ¹ô§O¥N¸¹
-ChineseName: ¹ô§O¤¤¤å¦WºÙ
+ID: å¹£åˆ¥ID(PK)
+Currency: å¹£åˆ¥ä»£è™Ÿ
+ChineseName: å¹£åˆ¥ä¸­æ–‡åç¨±
 
 
-## ¤w¹ê§@¥[¤À¶µ¥Ø
-1. ¦L¥X©Ò¦³ API ³Q©I¥s¥H¤Î©I¥s¥~³¡ API ªº request and response body log
-2. Error handling ³B²z API response
+## å·²å¯¦ä½œåŠ åˆ†é …ç›®
+1. å°å‡ºæ‰€æœ‰ API è¢«å‘¼å«ä»¥åŠå‘¼å«å¤–éƒ¨ API çš„ request and response body log
+2. Error handling è™•ç† API response
 3. swagger-ui
-4. design pattern ¹ê§@(MVC)
-5. ¯à°÷¹B¦æ¦b Docker
+4. design pattern å¯¦ä½œ(MVC)
+5. èƒ½å¤ é‹è¡Œåœ¨ Docker
+6. åŠ è§£å¯†æŠ€è¡“æ‡‰ç”¨ (AES/RSAâ€¦etc.)
 
 ## Demo Youtube
 (https://youtu.be/j7tiq78el8s?si=q_5FWWGTwgPw9Rio)
