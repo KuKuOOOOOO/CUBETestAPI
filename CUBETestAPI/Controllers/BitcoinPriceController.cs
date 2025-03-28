@@ -12,10 +12,12 @@ namespace CUBETestAPI.Controllers
     public class BitcoinPriceController : ControllerBase
     {
         private readonly HttpClient _httpClient;
+        private readonly RsaCryptoService _rsaService;
 
-        public BitcoinPriceController(IHttpClientFactory httpClientFactory)
+        public BitcoinPriceController(IHttpClientFactory httpClientFactory, RsaCryptoService rsaService)
         {
             _httpClient = httpClientFactory.CreateClient();
+            _rsaService = rsaService;
         }
         [HttpGet("current")]
         public async Task<IActionResult> GetBitcoinPrice()
@@ -36,8 +38,13 @@ namespace CUBETestAPI.Controllers
                     return StatusCode(500, "Error parsing Coindesk API response.");
 
                 var transformedData = CoindeskResponseMapper.MapToTransformedFormat(coindeskData);
+                var json = JsonConvert.SerializeObject(transformedData);
+                var encryptedData = _rsaService.Encrypt(json);
 
-                return Ok(transformedData);
+                return Ok(new
+                {
+                    EncryptedData = encryptedData
+                });
             }
             catch (Exception ex)
             {

@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 
 #region Dependency Injection
 builder.Services.AddSingleton<IDatabaseService>(sp => new DatabaseService(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddSingleton<RsaCryptoService>();
 #endregion
 
 builder.Services.AddEndpointsApiExplorer();
